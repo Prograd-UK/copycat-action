@@ -123,10 +123,10 @@ if [ "$?" -ne 0 ]; then
     cd ${DST_REPO_DIR} || exit "$?"
     echo >&2 "Creating branch '$DST_BRANCH'"
     git checkout -b ${DST_BRANCH}
-    if [ "$?" -ne 0 ]; then
-        echo >&2 "Creation of Branch '$DST_BRANCH' failed"
-        exit 1
-    fi
+#     if [ "$?" -ne 0 ]; then
+#         echo >&2 "Creation of Branch '$DST_BRANCH' failed"
+#         exit 1
+#     fi
     cd ..
 fi
 
