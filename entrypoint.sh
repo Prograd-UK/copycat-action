@@ -84,10 +84,10 @@ else
 fi
 
 git clone --branch ${SRC_BRANCH} --single-branch --depth 1 https://${PERSONAL_TOKEN}@github.com/${SRC_REPO}.git
-if [ "$?" -ne 0 ]; then
-    echo >&2 "Cloning '$SRC_REPO' failed"
-    exit 1
-fi
+# if [ "$?" -ne 0 ]; then
+#     echo >&2 "Cloning '$SRC_REPO' failed"
+#     exit 1
+# fi
 rm -rf ${SRC_REPO_NAME}/.git
 
 if [[ -n "$FILE_FILTER" ]]; then
