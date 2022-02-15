@@ -95,8 +95,7 @@ if [[ -n "$FILE_FILTER" ]]; then
 fi
 
 if [[ -n "$FILTER" ]]; then
-#     tmp_dir=$(mktemp -d -t ci-XXXXXXXXXX)
-    tmp_dir="tmp"
+    tmp_dir=$(mktemp -d -t ci-XXXXXXXXXX)
     mkdir ${temp_dir}/${SRC_REPO_NAME}
     cd ${SRC_REPO_NAME}
     FINAL_SOURCE="${tmp_dir}/${SRC_REPO_NAME}/${SRC_PATH}"
