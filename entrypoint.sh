@@ -83,12 +83,12 @@ else
     echo "Copying files matching \"${FILE_FILTER}\" from \"${SRC_REPO_NAME}/${SRC_PATH}\" and pushing it to ${DST_OWNER}/${DST_REPO_NAME}"
 fi
 
-git clone --branch ${SRC_BRANCH} --single-branch --depth 1 https://${PERSONAL_TOKEN}@github.com/${SRC_REPO}.git
+# git clone --branch ${SRC_BRANCH} --single-branch --depth 1 https://${PERSONAL_TOKEN}@github.com/${SRC_REPO}.git
 # if [ "$?" -ne 0 ]; then
 #     echo >&2 "Cloning '$SRC_REPO' failed"
 #     exit 1
 # fi
-rm -rf ${SRC_REPO_NAME}/.git
+# rm -rf ${SRC_REPO_NAME}/.git
 
 if [[ -n "$FILE_FILTER" ]]; then
     find ${SRC_REPO_NAME}/ -type f -not -name "${FILE_FILTER}" -exec rm {} \;
